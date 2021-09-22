@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tabuna\Memento;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\Application;
 
 class MementoServiceProvider extends ServiceProvider
 {

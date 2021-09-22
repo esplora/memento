@@ -6,5 +6,4 @@ namespace Tabuna\Memento\Tests;
 
 class StorageMementoTest extends TestCase
 {
-
 }
