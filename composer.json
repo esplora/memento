@@ -1,0 +1,49 @@
+{
+    "name": "tabuna/memento",
+    "description": "Easy and open-source website analytics tool for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Chernyaev",
+            "email": "bliz48rus@gmail.com",
+            "homepage": "https://tabuna.github.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/cache": "^8.50"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.2",
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench-core": "^6.2",
+        "laravel/framework": "^8.50"
+    },
+    "suggest": {
+        "ext-redis": "Required to use the Redis driver."
+    },
+    "autoload": {
+        "psr-4": {
+            "Tabuna\\Memento\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tabuna\\Memento\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Tabuna\\Memento\\MementoServiceProvider"
+            ],
+            "aliases": {
+                "Memento": "Tabuna\\Memento\\Memento"
+            }
+        }
+    }
+}
