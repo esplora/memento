@@ -1,4 +1,4 @@
-# Memento
+# Memento ⌛️
 
 **Memento** is a small package that only stores the result within a single request or job.
 
