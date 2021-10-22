@@ -96,4 +96,3 @@ class MementoStorage
         $this->items = new Collection();
     }
 }
-

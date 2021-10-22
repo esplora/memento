@@ -19,7 +19,7 @@ class MementoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(MementoStorage::class, fn() => new MementoStorage());
+        $this->app->singleton(MementoStorage::class, fn () => new MementoStorage());
     }
 
     /**
@@ -29,7 +29,7 @@ class MementoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Event::listen(fn(\Laravel\Octane\Events\RequestReceived $request) => Memento::flush());
-        Event::listen(fn(\Illuminate\Queue\Events\JobProcessed $request) => Memento::flush());
+        Event::listen(fn (\Laravel\Octane\Events\RequestReceived $request) => Memento::flush());
+        Event::listen(fn (\Illuminate\Queue\Events\JobProcessed $request) => Memento::flush());
     }
 }
