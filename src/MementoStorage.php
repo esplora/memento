@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Tabuna\Memento;
 
-use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Collection;
 
-class MementoStorage implements Store
+/**
+ * Class MementoStorage.
+ */
+class MementoStorage
 {
     /**
      * @var \Illuminate\Support\Collection
@@ -37,66 +39,16 @@ class MementoStorage implements Store
     }
 
     /**
-     * @param array $keys
-     *
-     * @return array|void
-     */
-    public function many(array $keys)
-    {
-        return $this->get($keys);
-    }
-
-    /**
      * Store an item in the cache for a given number of seconds.
      *
      * @param string $key
      * @param mixed  $value
-     * @param int    $seconds
      *
      * @return void
      */
-    public function put($key, $value, $seconds = null)
+    public function put($key, $value)
     {
         $this->items->put($key, $value);
-    }
-
-    /**
-     * @param array $values
-     * @param null  $seconds
-     *
-     * @return void
-     */
-    public function putMany(array $values, $seconds = null)
-    {
-        foreach ($values as $keys => $value) {
-            $this->put($keys, $value);
-        }
-    }
-
-    /**
-     * Increment the value of an item in the cache.
-     *
-     * @param string $key
-     * @param mixed  $value
-     *
-     * @return void
-     */
-    public function increment($key, $value = 1)
-    {
-        $this->put($key, $this->get($key) + $value);
-    }
-
-    /**
-     * Decrement the value of an item in the cache.
-     *
-     * @param string $key
-     * @param mixed  $value
-     *
-     * @return void
-     */
-    public function decrement($key, $value = 1)
-    {
-        $this->put($key, $this->get($key) - $value);
     }
 
     /**
@@ -105,11 +57,21 @@ class MementoStorage implements Store
      * @param string $key
      * @param mixed  $value
      *
-     * @return void
+     * @return mixed
      */
     public function forever($key, $value)
     {
+        if ($this->items->has($key)) {
+            return $this->get($key);
+        }
+
+        if (is_callable($value)) {
+            $value = $value();
+        }
+
         $this->put($key, $value);
+
+        return $value;
     }
 
     /**
@@ -133,14 +95,5 @@ class MementoStorage implements Store
     {
         $this->items = new Collection();
     }
-
-    /**
-     * Get the cache key prefix.
-     *
-     * @return string
-     */
-    public function getPrefix(): string
-    {
-        return '';
-    }
 }
+

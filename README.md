@@ -1,6 +1,10 @@
-# Memento 
+# Memento
 
-Memento is a driver for Laravel Cache which stores results only within a single request or job.
+**Memento** is a small package that only stores the result within a single request or job.
+
+Package adds a new cache stored in the container instance, which avoids using
+a [Laravel Cache](https://laravel.com/docs/cache#introduction) with access to the file system or fast storage like Redis
+when needed in a very short lifetime.
 
 ## Installation
 
@@ -20,10 +24,17 @@ memento('users' function() {
 });
 ```
 
-You can also use it with the Cache facade:
+No matter how many times you make a repeated call, it will return the first executed value. After the completion of the
+HTTP request or Job queue, the cache will be flush automatically.
+
+## Flushing the cache
+
+To flush the entire cache you can call:
 
 ```php
-$value = Cache::store('memento')->get('users');
+use Tabuna\Memento\Memento;
+
+Memento::flush();
 ```
 
 ## License

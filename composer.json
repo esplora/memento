@@ -1,6 +1,6 @@
 {
     "name": "tabuna/memento",
-    "description": "Easy and open-source website analytics tool for Laravel",
+    "description": "Easy cache store for only stores the result within a single request or job",
     "license": "MIT",
     "authors": [
         {
@@ -12,16 +12,12 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/cache": "^8.50"
+        "laravel/framework": "^8.67"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.2",
         "phpunit/phpunit": "^9.0",
-        "orchestra/testbench-core": "^6.2",
-        "laravel/framework": "^8.50"
-    },
-    "suggest": {
-        "ext-redis": "Required to use the Redis driver."
+        "orchestra/testbench-core": "^6.2"
     },
     "autoload": {
         "psr-4": {
