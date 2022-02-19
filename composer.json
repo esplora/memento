@@ -11,17 +11,17 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "laravel/framework": "^8.67"
+        "php": "^8.0",
+        "laravel/framework": "^9.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.2",
         "phpunit/phpunit": "^9.0",
-        "orchestra/testbench-core": "^6.2"
+        "orchestra/testbench-core": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Tabuna\\Memento\\": "src/"
+            "AssistedMindfulness\\Memento\\": "src/"
         },
         "files": [
             "helpers.php"
@@ -29,16 +29,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tabuna\\Memento\\Tests\\": "tests/"
+            "AssistedMindfulness\\Memento\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-              "Tabuna\\Memento\\MementoServiceProvider"
+                "AssistedMindfulness\\Memento\\MementoServiceProvider"
             ],
             "aliases": {
-                "Memento": "Tabuna\\Memento\\Memento"
+                "Memento": "AssistedMindfulness\\Memento\\Memento"
             }
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-use Tabuna\Memento\Memento;
+use AssistedMindfulness\Memento\Memento;
 
 if (!function_exists('memento')) {
     /**

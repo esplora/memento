@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tabuna\Memento;
+namespace AssistedMindfulness\Memento;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
