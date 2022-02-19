@@ -11,7 +11,7 @@ when needed in a very short lifetime.
 You may install Memento into your project using the Composer package manager:
 
 ```bash
-composer require tabuna/memento
+composer require assisted-mindfulness/memento
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ HTTP request or Job queue, the cache will be flush automatically.
 To flush the entire cache you can call:
 
 ```php
-use Tabuna\Memento\Memento;
+use AssistedMindfulness\Memento\Memento;
 
 Memento::flush();
 ```
