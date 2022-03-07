@@ -1,5 +1,5 @@
 {
-    "name": "tabuna/memento",
+    "name": "assisted-mindfulness/memento",
     "description": "Easy cache store for only stores the result within a single request or job",
     "license": "MIT",
     "authors": [
