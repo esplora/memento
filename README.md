@@ -19,7 +19,7 @@ composer require assisted-mindfulness/memento
 The simplest use is with a helper function that will return the result:
 
 ```php
-memento('users' function() {
+memento('users', function() {
   return DB::table('users')->get();
 });
 ```
