@@ -1,14 +1,13 @@
 # Memento ⌛️
 
-**Memento** is a small package that only stores the result within a single request or job.
+**Memento** is a small package that stores the result of a function or operation within a single HTTP request or job.
 
-Package adds a new cache stored in the container instance, which avoids using
-a [Laravel Cache](https://laravel.com/docs/cache#introduction) with access to the file system or fast storage like Redis
-when needed in a very short lifetime.
+
+The package adds a new cache stored in the container instance, which avoids the need to use a [Laravel Cache](https://laravel.com/docs/cache#introduction) with access to the file system or fast storage like Redis when the result only needs to be stored for a short time.
 
 ## Installation
 
-You may install Memento into your project using the Composer package manager:
+You can install Memento in your project using the Composer package manager:
 
 ```bash
 composer require assisted-mindfulness/memento
@@ -16,7 +15,7 @@ composer require assisted-mindfulness/memento
 
 ## Usage
 
-The simplest use is with a helper function that will return the result:
+The simplest way to use Memento is with the provided helper function:
 
 ```php
 memento('users', function() {
@@ -24,12 +23,11 @@ memento('users', function() {
 });
 ```
 
-No matter how many times you make a repeated call, it will return the first executed value. After the completion of the
-HTTP request or Job queue, the cache will be flush automatically.
+This function will return the result of the provided closure on the first call, and any subsequent calls within the same HTTP request or job will return the same result. The cache will be automatically flushed after the request or job is completed.
 
-## Flushing the cache
+## Flushing the Cache
 
-To flush the entire cache you can call:
+To flush the entire Memento cache, you can use the following code:
 
 ```php
 use AssistedMindfulness\Memento\Memento;
