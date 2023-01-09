@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * Class Memento.
  *
  * @method static mixed forever($key, $value)
- * @method static void flush()
+ * @method static void  flush()
  */
 class Memento extends Facade
 {
