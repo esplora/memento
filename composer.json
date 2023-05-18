@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AssistedMindfulness\\Memento\\": "src/"
+            "Esplora\\Memento\\": "src/"
         },
         "files": [
             "helpers.php"
@@ -28,16 +28,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AssistedMindfulness\\Memento\\Tests\\": "tests/"
+            "Esplora\\Memento\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "AssistedMindfulness\\Memento\\MementoServiceProvider"
+                "Esplora\\Memento\\MementoServiceProvider"
             ],
             "aliases": {
-                "Memento": "AssistedMindfulness\\Memento\\Memento"
+                "Memento": "Esplora\\Memento\\Memento"
             }
         }
     }
