@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace AssistedMindfulness\Memento\Tests;
+namespace Esplora\Memento\Tests;
 
-use AssistedMindfulness\Memento\Memento;
-use AssistedMindfulness\Memento\MementoServiceProvider;
+use Esplora\Memento\Memento;
+use Esplora\Memento\MementoServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {

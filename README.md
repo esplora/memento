@@ -1,16 +1,19 @@
-# Memento ⌛️
+# <img src=".github/logo.svg?sanitize=true" width="24" height="24" alt="Memento"> Memento
+
+![Unit tests](https://github.com/esplora/similar/workflows/Tests/badge.svg)
 
 **Memento** is a small package that stores the result of a function or operation within a single HTTP request or job.
 
-
-The package adds a new cache stored in the container instance, which avoids the need to use a [Laravel Cache](https://laravel.com/docs/cache#introduction) with access to the file system or fast storage like Redis when the result only needs to be stored for a short time.
+The package adds a new cache stored in the container instance, which avoids the need to use
+a [Laravel Cache](https://laravel.com/docs/cache#introduction) with access to the file system or fast storage like Redis
+when the result only needs to be stored for a short time.
 
 ## Installation
 
 You can install Memento in your project using the Composer package manager:
 
 ```bash
-composer require assisted-mindfulness/memento
+composer require esplora/memento
 ```
 
 ## Usage
@@ -30,7 +33,7 @@ This function will return the result of the provided closure on the first call, 
 To flush the entire Memento cache, you can use the following code:
 
 ```php
-use AssistedMindfulness\Memento\Memento;
+use Esplora\Memento\Memento;
 
 Memento::flush();
 ```

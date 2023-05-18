@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AssistedMindfulness\Memento;
+namespace Esplora\Memento;
 
 use Illuminate\Support\Collection;
 

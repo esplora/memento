@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace AssistedMindfulness\Memento\Tests;
+namespace Esplora\Memento\Tests;
 
-use AssistedMindfulness\Memento\Memento;
+use Esplora\Memento\Memento;
 
 class StorageMementoTest extends TestCase
 {
