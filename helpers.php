@@ -1,6 +1,6 @@
 <?php
 
-use AssistedMindfulness\Memento\Memento;
+use Esplora\Memento\Memento;
 
 if (!function_exists('memento')) {
     /**
