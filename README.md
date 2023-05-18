@@ -1,6 +1,6 @@
 # <img src=".github/logo.svg?sanitize=true" width="24" height="24" alt="Memento"> Memento
 
-![Unit tests](https://github.com/esplora/similar/workflows/Tests/badge.svg)
+[![Tests](https://github.com/esplora/memento/actions/workflows/phpunit.yml/badge.svg)](https://github.com/esplora/memento/actions/workflows/phpunit.yml)
 
 **Memento** is a small package that stores the result of a function or operation within a single HTTP request or job.
 
