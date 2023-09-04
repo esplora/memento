@@ -2,7 +2,7 @@
 
 use Esplora\Memento\Memento;
 
-if (!function_exists('memento')) {
+if (! function_exists('memento')) {
     /**
      * Get an item from the cache, or execute the given Closure and store the result forever.
      *
@@ -11,7 +11,7 @@ if (!function_exists('memento')) {
      *
      * @return mixed
      */
-    function memento(string $key, \Closure $callback)
+    function memento(string $key, Closure $callback)
     {
         return Memento::forever($key, $callback);
     }
