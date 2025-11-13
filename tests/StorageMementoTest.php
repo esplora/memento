@@ -30,7 +30,7 @@ class StorageMementoTest extends TestCase
         $this->count = 0;
     }
 
-    public function testWriteValue(): void
+    public function test_write_value(): void
     {
         $value = memento('count', function () {
             return $this->increments();
@@ -39,7 +39,7 @@ class StorageMementoTest extends TestCase
         $this->assertEquals(1, $value);
     }
 
-    public function testWriteDuplicateValue(): void
+    public function test_write_duplicate_value(): void
     {
         memento('count', function () {
             return $this->increments();
@@ -55,7 +55,7 @@ class StorageMementoTest extends TestCase
         $this->assertEquals(1, $value);
     }
 
-    public function testFlushCache(): void
+    public function test_flush_cache(): void
     {
         memento('count', function () {
             return $this->increments();

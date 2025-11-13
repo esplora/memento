@@ -23,7 +23,7 @@ class MementoStorage
      */
     public function __construct()
     {
-        $this->items = new Collection();
+        $this->items = new Collection;
     }
 
     /**
@@ -93,6 +93,6 @@ class MementoStorage
      */
     public function flush()
     {
-        $this->items = new Collection();
+        $this->items = new Collection;
     }
 }
