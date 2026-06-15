@@ -6,8 +6,8 @@ if (! function_exists('memento')) {
     /**
      * Get an item from the cache, or execute the given Closure and store the result forever.
      *
-     * @param string   $key
-     * @param \Closure $callback
+     * @param string  $key
+     * @param Closure $callback
      *
      * @return mixed
      */

@@ -6,11 +6,12 @@ namespace Esplora\Memento\Tests;
 
 use Esplora\Memento\Memento;
 use Esplora\Memento\MementoServiceProvider;
+use Illuminate\Foundation\Application;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
     /**
-     * @param \Illuminate\Foundation\Application $app
+     * @param Application $app
      *
      * @return array
      */
@@ -22,7 +23,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
+     * @param Application $app
      *
      * @return array
      */

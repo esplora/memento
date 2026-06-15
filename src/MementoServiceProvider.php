@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Esplora\Memento;
 
+use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Octane\Events\RequestReceived;
 
 /**
  * Class MementoServiceProvider.
@@ -29,7 +31,7 @@ class MementoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Event::listen(fn (\Laravel\Octane\Events\RequestReceived $request) => Memento::flush());
-        Event::listen(fn (\Illuminate\Queue\Events\JobProcessed $request) => Memento::flush());
+        Event::listen(fn (RequestReceived $request) => Memento::flush());
+        Event::listen(fn (JobProcessed $request) => Memento::flush());
     }
 }

@@ -12,7 +12,7 @@ use Illuminate\Support\Collection;
 class MementoStorage
 {
     /**
-     * @var \Illuminate\Support\Collection
+     * @var Collection
      */
     protected Collection $items;
 
